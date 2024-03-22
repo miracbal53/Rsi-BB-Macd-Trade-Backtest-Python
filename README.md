@@ -4,11 +4,15 @@
 
 Backtest sonuçları ekran görüntüsünde gözüktüğü gibi 
 
-Stratejinin Mantığı NE ?
+Strategy Logic:
 
-Long işlem için => Fiyatın Alt Bolinger Bandının Altında Kapanması ve MACD ya da RSI ile dönüş sinyali alması ve türevleri
-Short işlem için => Fiyatın Üst Bolinger Bandının Üstünde Kapanması ve MACD ya da RSI ile dönüş sinyali alması ve türevleri
+For Long Trades: Closing below the Lower Bollinger Band with a reversal signal from MACD or RSI or similar indicators.
 
-TP VE SL koşulları NE ?
+For Short Trades: Closing above the Upper Bollinger Band with a reversal signal from MACD or RSI or similar indicators.
 
-2 farklı tp ve sl methodu var. ATR ve % lik olarak eğer tp_level ve sl_level değişkenlerini 1 den büyük girerseniz atr kabul ediyor 0.002 gibi bir değer girerseniz %2 olarak kabul ediyor 
+TP (Take Profit) and SL (Stop Loss) Conditions:
+
+There are two different methods for TP and SL:
+
+1. ATR (Average True Range): If the variables tp_level and sl_level are greater than 1, it considers them as ATR values. For example, entering a value like 0.002 would be interpreted as 0.2%.
+2. Percentage: If the tp_level and sl_level variables are between 0 and 1, they are interpreted as percentages. For instance, entering a value like 0.002 would be interpreted as 0.2%.
